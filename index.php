@@ -20,11 +20,13 @@ require_once __DIR__ . '/data/db.php';
     <div class="d-flex flex-wrap gap-3 m-5" >
         <?php foreach($prodotti as $prodotto):?>
             <div class="card" style="width: 18rem;">
-            <img src="<?php echo $prodotto->img ?>" class="card-img-top" alt="...">
+            <img src="<?php echo $prodotto->img ?>" class="card-img-top" alt="">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title"><?php echo $prodotto->name ?></h5>
+                    <p class="card-text"><?php echo $prodotto->descrizione ?></p>
+                    <p class="card-text">Categoria: per <?php echo $prodotto->categoria ?></p>
+                    <p class="card-text">Prezzo: <?php echo $prodotto->prezzo ?>€</p>
+                    
                 </div>
             </div>
         <?php endforeach;?>
