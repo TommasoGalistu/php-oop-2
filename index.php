@@ -22,7 +22,7 @@ require_once __DIR__ . '/data/db.php';
             <div class="card" style="width: 18rem;">
             <img src="<?php echo $prodotto->img ?>" class="card-img-top" alt="">
                 <div class="card-body">
-                    <h5 class="card-title"><?php echo $prodotto->name ?></h5>
+                    <h5 class="card-title"><?php echo $prodotto->getName() ?></h5>
                     <p class="card-text"><?php echo $prodotto->descrizione ?></p>
                     <p class="card-text">Categoria: per <?php echo $prodotto->categoria ?></p>
                     <p class="card-text">Prezzo: <?php echo $prodotto->prezzo ?>€</p>
